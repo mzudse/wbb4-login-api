@@ -5,7 +5,7 @@ use wcf\data\user\User;
 $email 		= $_POST['email'];
 $password 	= $_POST['password'];
 
-$return = [];
+header('Content-Type: application/json');
 
 if(!isset($email, $password) || empty($email) || empty($password)) {
 	echo json_encode(['status' => 'error', 'msg' => 'invalid_params']);
